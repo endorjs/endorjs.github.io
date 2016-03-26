@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>endor.js: the simplest and fastest HTML5 presentation framework</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.rawgit.com/endorjs/endor/v0.4.1/dist/css/main.min.css">
+    <script type="application/javascript"
+            src="https://cdn.rawgit.com/endorjs/endor/v0.4.1/dist/highlight/highlight.pack.js"></script>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>endor.js: the simplest and fastest HTML5 presentation framework</h1>
+            <p><a href="https://endorjs.github.io">https://endorjs.github.io</a></p>
+            <ul>
+                <li><strong>Next slide</strong>: arrow down or arrow right</li>
+                <li><strong>Previous slide</strong>: arrow up or arrow left</li>
+            </ul>
+        </header>
+        <section>
+            <h2>Background</h2>
+            <p>Tired of bloated HTML presentation frameworks relying upon
+                many «obsolete» JavaScript frameworks such as jQuery that can be
+                easily replaced by the standard
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API">Web APIs</a>?</p>
+            <p>Then try out <strong>endor.js</strong>!</p>
+        </section>
+        <section>
+            <h2>Characteristics</h2>
+            <ul>
+                <li>Use of the semantic structure from the HTML5 elements.
+                    No need to tag the presentation slides with the
+                    <code>class="slide"</code> attribute (see usage section).</li>
+                <li>Theme creation via structured <a href="http://sass-lang.com/">Sass</a>
+                    variables.</li>
+                <li>Minimum set of external dependencies (at the moment, our
+                    framework depends only on <a href="https://highlightjs.org/">hightlight.js</a>
+                    for code highlighting).</li>
+                <li>Fonts via <a href="https://www.google.com/fonts">Google Fonts</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Download</h2>
+            <ul>
+                <li>From npm:
+                    <pre class="console"><code>$ npm install [-g] endor.js</code>
+                    </pre>
+                    You can find all what you need to start your presentation under the
+                    <code>dist</code> directory.
+                </li>
+                <li>From <a href="https://github.com/endorjs/endor/archive/master.zip">GitHub
+                    as a direct download</a>.</li>
+                <li>Copy the structure of the <a href="https://cdn.rawgit.com/endorjs/endor/0.4.2/dist/index_cdn.html">index_cdn.html</a> file, which links the corresponding dependencies
+                    from the CDN at <a href="https://rawgit.com/">RawGit</a>.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>(Simple list) Slide #2</h2>
+            <ul>
+                <li>Bla
+                    <ul>
+                        <li>Bla.1</li>
+                        <li>Bla.2</li>
+                    </ul>
+                </li>
+                <li>Ble</li>
+            </ul>
+        </section>
+        <section>
+            <h2>(Double column) Slide #3</h2>
+            <div class="col-left">
+                <h3>Left column</h3>
+                <ul>
+                    <li>Bla</li>
+                    <li>Ble</li>
+                </ul>
+            </div>
+            <div class="col-right">
+                <h3>Right column</h3>
+                <ul>
+                    <li>Bla</li>
+                    <li>Ble</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>(Blockquote) Slide #4</h2>
+            <p>This is a cite.</p>
+            <blockquote>
+                <p>Minions ipsum aaaaaah tatata bala tu aaaaaah chasy.
+                    Bappleees bananaaaa poulet tikka masala bappleees pepete
+                    hahaha jeje para tú. Belloo! hana dul sae tatata bala tu
+                    ti aamoo! Poulet tikka masala po kass butt butt belloo!
+                    Me want bananaaa! Me want bananaaa! Jiji tulaliloo hahaha
+                    potatoooo. Wiiiii poulet tikka masala gelatooo wiiiii
+                    underweaaar daa.</p>
+                <cite>Minions</cite>
+            </blockquote>
+        </section>
+        <section>
+            <h2>(Sample code) Slide #5</h2>
+            <pre class="html">
+                <code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;article&gt;
+        &lt;!-- ... --&gt;
+    &lt;/article&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+            </pre>
+        </section>
+        <section>
+            <h2>(Responsive image) Slide #6</h2>
+            <figure>
+                <img src="https://www.w3.org/2005/01/timelines/timeline-2500x998.png"
+                     alt="W3C 10th Anniversary Timeline"
+                     longdesc="https://www.w3.org/2005/01/timelines/description">
+                <figcaption>W3C 10th Anniversary</figcaption>
+            </figure>
+        </section>
+        <footer>
+            <address>
+                © 2016 endor.js
+            </address>
+            <div id="counter">
+                Slide <span id="slide_counter"></span> of
+                <span id="slides_total"></span>
+            </div>
+        </footer>
+    </article>
+    <script type="application/javascript"
+            src="https://cdn.rawgit.com/endorjs/endor/v0.4.1/dist/scripts/endor.min.js"></script>
+    <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
